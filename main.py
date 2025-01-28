@@ -1,4 +1,5 @@
 import pygame
+import os
 
 GREY = (128, 128, 128)
 BLACK = (0, 0, 0)
@@ -19,7 +20,8 @@ bounce_sound.set_volume(0.25)
 
 score = 0
 lives = 5
-FONT = pygame.font.Font("NES_font\PixelEmulator-xq08.ttf", 40)
+# "NES_font/PixelEmulator-xq08.ttf"
+FONT = pygame.font.Font(os.path.join(os.getcwd(), 'NES_font', 'PixelEmulator-xq08.ttf'), 40)
 
 BOX_DS = (500, 500) #box dimensions
 BOX_PADDING = 100 #cage's thickness
